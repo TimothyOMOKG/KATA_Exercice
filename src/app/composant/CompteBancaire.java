@@ -27,4 +27,6 @@ public class CompteBancaire {
 		this.prenom = prenom;
 		// TODO Auto-generated constructor stub
 	}
+	
+	
 }
