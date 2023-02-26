@@ -20,7 +20,7 @@ public class MenuCliCompteBancaire {
 			
 			do {
 			System.out.println("\n***** Bonjour "+nom+" "+prenom+", bienvenue sur votre Banque CLI KATA *****");
-			System.out.println("D�pot (1), Retrait (2)  Consulter l'historique du compte (3) Quitter (4)");
+			System.out.println("Depot (1), Retrait (2)  Consulter l'historique du compte (3) Quitter (4)");
 			System.out.print("Choix ? :");
 			value = Integer.parseInt(scan.nextLine());
 			switch (value) {
@@ -28,7 +28,7 @@ public class MenuCliCompteBancaire {
 				try {
 					double transac = nouvelleTransactionDepot();
 					compte.deposer(transac);
-					System.out.println("Votre depot a ete effectue ! ! \n");
+					System.out.println("Votre depot a ete effectue ! \n");
 				} catch (Exception e) {
 					System.out.println("Erreur de saisi");
 				}
