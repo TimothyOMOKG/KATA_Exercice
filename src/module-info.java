@@ -1,0 +1,2 @@
+module KATA_Exercice {
+}
