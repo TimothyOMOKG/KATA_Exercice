@@ -28,7 +28,7 @@ public class MenuCliCompteBancaire {
 				try {
 					double transac = nouvelleTransactionDepot();
 					compte.deposer(transac);
-					System.out.println("Votre d�pot � �t� effectu� ! \n");
+					System.out.println("Votre depot a ete effectue ! ! \n");
 				} catch (Exception e) {
 					System.out.println("Erreur de saisi");
 				}
@@ -39,7 +39,7 @@ public class MenuCliCompteBancaire {
 				try {
 					double transac = nouvelleTransactionRetrait();
 					compte.retrait(transac);
-					System.out.println("Votre retrait � �t� effectu� ! \n");
+					System.out.println("Votre retrait a ete effectue ! \n");
 				} catch (Exception e) {
 					System.out.println("Erreur de saisi");
 				}
@@ -78,9 +78,9 @@ public class MenuCliCompteBancaire {
 	public static double nouvelleTransactionDepot() {
 		double depot;
 		scan = new Scanner(System.in);
-		System.out.println("\n--- Vous allez effectuer un d�pot --- \n");
+		System.out.println("\n--- Vous allez effectuer un depot --- \n");
 		// Presentation de l'interface CLI
-		System.out.println("Montant du d�pot : ");
+		System.out.println("Montant du depot : ");
 		depot = Double.parseDouble(scan.nextLine());
 		return depot;
 	}
@@ -97,7 +97,7 @@ public class MenuCliCompteBancaire {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// ******* Decommenter les lignes 102 & 103 pour tester le mode int�ractif du programme
+		// ******* Decommenter les lignes 102 & 103 pour tester le mode interactif du programme
 		scan = new Scanner(System.in);
 		menu();
 		

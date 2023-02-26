@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class CompteBancaire {
 	static Scanner scan;
-	// création d'une énumération opération pour définir l'opération qu'on souhaite réaliser
+	// creation d'une enumeration operation pour definir l'operation qu'on souhaite realiser
 	public enum Operation {
 		Depot, Retrait
 	}
@@ -20,7 +20,7 @@ public class CompteBancaire {
 	public double decouvert;
 	private DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"); // gestion de la date 
 	private LocalDateTime date = LocalDateTime.now(); ;
-	public ArrayList <String> history= new ArrayList<String>(); // ArrayList pour gérer l'historique des transactions bancaires
+	public ArrayList <String> history= new ArrayList<String>(); // ArrayList pour gerer l'historique des transactions bancaires
 	
 	public CompteBancaire(String nom, String prenom) {
 		this.nom = nom;
@@ -28,7 +28,7 @@ public class CompteBancaire {
 		// TODO Auto-generated constructor stub
 	}
 	
-	// gestion du dépot de l'argent
+	// gestion du dï¿½pot de l'argent
 	public void deposer(double depot) {
 		date = LocalDateTime.now();
 		this.solde = this.solde + depot;
@@ -55,7 +55,7 @@ public class CompteBancaire {
 					retirer.toString(), String.valueOf(retrait),String.valueOf(this.solde));
 			history.add(histo.toString());
 			System.out.println(
-					"Vous êtes en découvert votre compte est maintenant débiteur de : " + Math.abs(this.decouvert));
+					"Vous etes en decouvert votre compte est maintenant debiteur de : " + Math.abs(this.decouvert));
 		} else if (this.solde == retrait) {
 			this.solde = this.solde - retrait;
 			this.decouvert = solde;
@@ -63,21 +63,21 @@ public class CompteBancaire {
 			HistoriqueTransaction histo = new HistoriqueTransaction(this.nom, this.prenom, this.dateFormat.format(date),
 					retirer.toString(), String.valueOf(retrait),String.valueOf(this.solde));
 			history.add(histo.toString());
-			System.out.println("votre compte est de 0 € : " + Math.abs(this.decouvert));
+			System.out.println("votre compte est de 0 â‚¬ : " + Math.abs(this.decouvert));
 		}
 	}
-	// création d'une méthode toString pour la gestion de l'affichage CLI
+	// crï¿½ation d'une mï¿½thode toString pour la gestion de l'affichage CLI
 	public String toString()
 	
 	{
 		return "********************* Historique**********************\n"+"\t"+" Bonjour "+this.nom+ " "+this.prenom+"\n";
 	}
 
-	// méthode qui va afficher sous forme de string l'historique du compte bancaire 
+	// mï¿½thode qui va afficher sous forme de string l'historique du compte bancaire 
 	public void affichHisto() {
 		if(history.isEmpty()) {
 			history.add("********************* Historique**********************\n"+"\t"+" Bonjour "+this.nom+ " "+this.prenom+"\n"+
-					"votre solde est de :"+ this.solde+" €"+" "+this.dateFormat.format(date)+"\n");
+					"votre solde est de :"+ this.solde+" a"+" "+this.dateFormat.format(date)+"\n");
 			System.out.println(history.toString());
 		}else {
 		System.out.println(history.toString());
