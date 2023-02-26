@@ -35,7 +35,7 @@ public class CompteBancaire {
 		Operation deposer = Operation.Depot;
 		HistoriqueTransaction histo = new HistoriqueTransaction(this.nom, this.prenom, this.dateFormat.format(date), deposer.toString(),
 				String.valueOf(depot), String.valueOf(this.solde));
-		System.out.println("votre compte est maintenant de : " + String.valueOf(this.solde)+" €"+" Vous avez depose : "+String.valueOf(depot));
+		System.out.println("votre compte est maintenant de : " + String.valueOf(this.solde)+" ï¿½"+" Vous avez depose : "+String.valueOf(depot));
 		history.add(histo.toString());
 	}
 	
@@ -47,7 +47,7 @@ public class CompteBancaire {
 			Operation retirer = Operation.Retrait;
 			HistoriqueTransaction histo = new HistoriqueTransaction(this.nom, this.prenom, this.dateFormat.format(date),
 					retirer.toString(), String.valueOf(retrait), String.valueOf(this.solde));
-			System.out.println("votre compte est maintenant de : " + String.valueOf(this.solde)+" €"+" Vous avez retire : "
+			System.out.println("votre compte est maintenant de : " + String.valueOf(this.solde)+" ï¿½"+" Vous avez retire : "
 					+String.valueOf(retrait));
 			history.add(histo.toString());
 		} else if (this.solde < retrait) {
@@ -56,7 +56,7 @@ public class CompteBancaire {
 			Operation retirer = Operation.Retrait;
 			HistoriqueTransaction histo = new HistoriqueTransaction(this.nom, this.prenom, this.dateFormat.format(date),
 					retirer.toString(), String.valueOf(retrait),String.valueOf(this.solde));
-			System.out.println("votre compte est maintenant de : " + String.valueOf(this.solde)+" €"+" Vous avez retire : "
+			System.out.println("votre compte est maintenant de : " + String.valueOf(this.solde)+" ï¿½"+" Vous avez retire : "
 					+String.valueOf(retrait));
 			history.add(histo.toString());
 			System.out.println(
@@ -68,11 +68,11 @@ public class CompteBancaire {
 			HistoriqueTransaction histo = new HistoriqueTransaction(this.nom, this.prenom, this.dateFormat.format(date),
 					retirer.toString(), String.valueOf(retrait),String.valueOf(this.solde));
 			history.add(histo.toString());
-			System.out.println("votre compte est maintenant de : " + String.valueOf(this.solde)+" €"+" Vous avez retire : "
+			System.out.println("votre compte est maintenant de : " + String.valueOf(this.solde)+" ï¿½"+" Vous avez retire : "
 					+String.valueOf(retrait));;
 		}
 	}
-	// crï¿½ation d'une mï¿½thode toString pour la gestion de l'affichage CLI
+	// creation d'une methode toString pour la gestion de l'affichage CLI
 	public String toString()
 	
 	{
