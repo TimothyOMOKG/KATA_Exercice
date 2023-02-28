@@ -97,19 +97,8 @@ public class MenuCliCompteBancaire {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// ******* Decommenter les lignes 102 & 103 pour tester le mode interactif du programme
 		scan = new Scanner(System.in);
 		menu();
-		
-		// ******* Decommenter les lignes 107 a 113 pour tester en dur le programme
-		//******************** PERMET DE TESTER EN DUR LE PROGRAMME ********************************
-//		CompteBancaire comp = new CompteBancaire("Tim", "James"); // creation d'un nouveau compte bancaire
-//		comp.deposer(2000.50);
-//		comp.retrait(50);
-//		comp.retrait(250.80);
-//		comp.affichHisto();
-//		comp.deposer(5000);
-//		comp.affichHisto();
 		
 	}
 }
