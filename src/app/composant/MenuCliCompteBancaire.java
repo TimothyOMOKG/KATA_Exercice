@@ -1,4 +1,15 @@
-package app.composant;
+/*
+********************* MODE D'UTILISATION DU CODE *********************************
+****************  Bonjour à vous utilisateur :) **********************************
+il s'agit d'une petite application CLI (Command Line Interface) :) 
+il faut renseigner son nom et prenom au début avant de pouvoir accéder 
+à l'appli. Lorsque vous choisirez l'option 4 (Quitter), votre compte et son
+historique de transaction seront supprimés.. :( 
+l'appli redemandera de renseigner son nom et prénom de nouveau
+Ce qui va créer un nouveau compte bancaire. 
+********************************* Merci, au revoir ********************************
+***********************************************************************************
+*/package app.composant;
 
 import java.util.Scanner;
 
